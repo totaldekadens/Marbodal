@@ -4,10 +4,11 @@ import Link from "next/link";
 const variantStyle = {
   light: "text-custom-300 bg-custom-50 hover:bg-custom-50/90",
   dark: "text-custom-50 bg-custom-300 hover:bg-custom-300/90",
+  modest: "text-custom-300 border border-custom-300 hover:bg-custom-300/10",
 };
 
 interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-  variant: "light" | "dark";
+  variant: "light" | "dark" | "modest";
   title: string;
   className?: string;
   href?: string;
@@ -15,7 +16,7 @@ interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 }
 
 interface LinkProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant: "light" | "dark";
+  variant: "light" | "dark" | "modest";
   title: string;
   className?: string;
   href?: string;
