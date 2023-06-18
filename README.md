@@ -5,11 +5,9 @@ My goal is to visually come as close as possible to Marbodals website using Next
 ## Getting Started
 
 ```bash
+npm i 
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 ## Sneak peak
