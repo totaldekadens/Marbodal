@@ -2,7 +2,14 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import Link from "next/link";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-function MobileNavItem({ href, children }: any) {
+import clsx from "clsx";
+
+interface NavItemProps {
+  href: string;
+  children: React.ReactNode;
+}
+
+function MobileNavItem({ href, children }: NavItemProps) {
   return (
     <li>
       <Popover.Button as={Link} href={href} className="block w-full py-5">
@@ -12,9 +19,13 @@ function MobileNavItem({ href, children }: any) {
   );
 }
 
-function MobileNavigation(props: any) {
+interface Props {
+  className?: string;
+}
+
+function MobileNavigation({ className }: Props) {
   return (
-    <Popover {...props} className={"z-50"}>
+    <Popover className={clsx(`${className}`, `z-50`)}>
       <Popover.Button
         aria-label="Go to mobile menu"
         className="group flex items-center rounded-full px-2 py-2 text-sm font-medium text-zinc-800 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20"

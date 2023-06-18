@@ -2,21 +2,28 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import MobileNavigation from "./MobileNavigation";
+import Button from "../Button";
+import {
+  MapPinIcon,
+  HeartIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/react/24/outline";
 
 interface NavItemProps {
   href: string;
   children: React.ReactNode;
+  className?: string;
 }
 
-function NavItem({ href, children }: NavItemProps) {
+function NavItem({ href, children, className }: NavItemProps) {
   let isActive = useRouter().pathname === href;
 
   return (
-    <li className="white whitespace-nowrap">
+    <li className={clsx(`${className}`, `whitespace-nowrap flex items-center`)}>
       <Link
         href={href}
         className={clsx(
-          " relative block px-3 py-2 transition text-custom-50 text-[17px]",
+          "relative flex items-center px-3 transition text-custom-50 font-normal text-[17px]",
           isActive
             ? "text-dark-200 dark:text-light-100 border-b transition "
             : "hover:text-dark-100 dark:hover:text-light-300"
@@ -33,28 +40,35 @@ function NavItem({ href, children }: NavItemProps) {
 
 function DesktopNavigation(props: React.HTMLProps<HTMLDivElement>) {
   return (
-    <div className="relative w-full flex items-center z-50">
-      <MobileNavigation />
-      <nav className="z-50" {...props}>
-        <ul className="text-custom-400 flex rounded-lg gap-2 px-3 text-sm font-medium md:text-base   ">
-          <NavItem href="/about">Våra kök</NavItem>
-          <NavItem href="/projects">Inspiration</NavItem>
-          <NavItem href="/tech">Hållbarhet</NavItem>
-          <NavItem href="/merits">Projekt & arkitekt</NavItem>
+    <div className="relative w-full flex items-center justify-between z-50">
+      <nav className="z-50 flex w-1/2 justify-start" {...props}>
+        <ul className="text-custom-400 hidden md:flex rounded-lg gap-x-2 item-center justify-start md:justify-center h-[48px] px-3 text-sm font-medium md:text-base">
+          <MobileNavigation className="hidden lg:flex" />
+          <NavItem href="/varakok">Våra kök</NavItem>
+          <NavItem href="/inspiration">Inspiration</NavItem>
+          <NavItem className="hidden xl:flex" href="/hallbarhet">
+            Hållbarhet
+          </NavItem>
+          <NavItem className="hidden 2xl:flex" href="/project">
+            Projekt & arkitekt
+          </NavItem>
         </ul>
       </nav>
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-full flex items-center justify-center">
+        <div className="w-full h-full flex items-center justify-start md:justify-center">
           <div className="w-[150px] h-[20px] text-2xl text-custom-50  font-bold ">
-            MARBODAL
+            <img src="/marbodal_light.png" />
           </div>
         </div>
       </div>
-      <div className=" hidden justify-end md:flex md:flex-1 items-center gap-3">
-        <button className="p-4 z-50 bg-white rounded-lg">Boka möte</button>
-        <div className="bg-white w-8 h-8 rounded-full" />
-        <div className="bg-white w-8 h-8 rounded-full" />
-        <div className="bg-white w-8 h-8 rounded-full" />
+      <div className="flex items-center gap-7">
+        <Button variant="light" title="Boka möte" small />
+        <div className="hidden gap-3 lg:flex">
+          <MapPinIcon className="stroke-custom-50 h-7 w-7" />
+          <HeartIcon className="stroke-custom-50 h-7 w-7" />
+          <MagnifyingGlassIcon className="stroke-custom-50 h-7 w-7" />
+        </div>
+        <MobileNavigation className="flex lg:hidden" />
       </div>
     </div>
   );

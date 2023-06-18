@@ -9,8 +9,7 @@ function Header() {
           <div className="top-0 z-10 h-16 pt-6">
             <div className=" w-full">
               <div className="relative flex justify-between gap-4 ">
-                <div className="pointer-events-auto md:hidden">Mobil</div>
-                <div className="w-full hidden md:flex">
+                <div className="w-full flex">
                   <DesktopNavigation />
                 </div>
               </div>
