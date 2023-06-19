@@ -32,15 +32,15 @@ const Chosen = () => {
     <Container className="py-28 items-center">
       <H2 color="dark" title="Utvald köksinspiration" className="text-center" />
       <div className="w-full grid grid-cols-1 lg:grid-cols-3 mt-12 gap-6">
-        {list.map((inspo) => (
-          <div className="relative">
+        {list.map((inspo, i) => (
+          <div key={i} className="relative rounded-sm">
             <img
               src={inspo.image.src}
               alt={inspo.image.alt}
-              className="w-full max-h-[500px] object-cover"
+              className="w-full max-h-[500px] object-cover rounded-sm"
             />
             <img
-              className="absolute inset-0 w-full max-h-[500px] object-cover"
+              className="absolute inset-0 w-full max-h-[500px] object-cover rounded-sm"
               src="/overlayGrid.png"
             />
             <div className="absolute inset-0">

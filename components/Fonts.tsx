@@ -24,7 +24,21 @@ export const H2 = ({ title, className, color }: H2Props) => {
       className={clsx(
         `${className}`,
         color == "dark" ? `text-custom-300` : `text-custom-50`,
-        "text-[34px] sm:text-[46px] lg:text-[55px] leading-none font-serif"
+        "text-[34px] sm:text-[46px] lg:text-[55px] leading-[3.5rem] font-serif"
+      )}
+    >
+      {title}
+    </h2>
+  );
+};
+
+export const H2Small = ({ title, className, color }: H2Props) => {
+  return (
+    <h2
+      className={clsx(
+        `${className}`,
+        color == "dark" ? `text-custom-300` : `text-custom-50`,
+        "text-[34px] lg:text-[55px] leading-[2.8rem] lg:leading-[3.5rem] font-serif"
       )}
     >
       {title}
@@ -38,7 +52,7 @@ export const H3 = ({ title, className, color }: H2Props) => {
       className={clsx(
         `${className}`,
         color == "dark" ? `text-custom-300` : `text-custom-50`,
-        "text-[34px] sm:text-[46px] lg:text-[55px] leading-none font-serif"
+        "text-[34px] sm:text-[46px] lg:text-[55px] leading-[3.5rem] font-serif"
       )}
     >
       {title}
