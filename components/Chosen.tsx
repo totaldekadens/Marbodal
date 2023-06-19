@@ -1,5 +1,5 @@
 import Button from "./Button";
-import { H2, P } from "./Fonts";
+import { H2, H3, P } from "./Fonts";
 import Container from "./Layout/Container";
 
 const list = [
@@ -31,7 +31,7 @@ const Chosen = () => {
   return (
     <Container className="py-28 items-center">
       <H2 color="dark" title="Utvald köksinspiration" className="text-center" />
-      <div className="w-full grid grid-cols-1 lg:grid-cols-3 mt-8 gap-6">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-3 mt-12 gap-6">
         {list.map((inspo) => (
           <div className="relative">
             <img
@@ -45,7 +45,7 @@ const Chosen = () => {
             />
             <div className="absolute inset-0">
               <div className="flex h-full w-full gap-7 lg:gap-4 xl:gap-7 justify-center items-center p-6 lg:p-2 xl:p-6 flex-col">
-                <H2 color="light" className="text-center" title={inspo.title} />
+                <H3 color="light" className="text-center" title={inspo.title} />
                 <P
                   className="text-center"
                   color="light"

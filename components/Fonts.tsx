@@ -12,17 +12,50 @@ interface PProps {
   className?: string;
 }
 
+interface WideUpperCTextProps {
+  title: string;
+  color: "dark" | "light";
+  className?: string;
+}
+
 export const H2 = ({ title, className, color }: H2Props) => {
   return (
     <h2
       className={clsx(
         `${className}`,
         color == "dark" ? `text-custom-300` : `text-custom-50`,
-        "text-[46px] lg:text-[55px] leading-none font-serif"
+        "text-[34px] sm:text-[46px] lg:text-[55px] leading-none font-serif"
       )}
     >
       {title}
     </h2>
+  );
+};
+
+export const H3 = ({ title, className, color }: H2Props) => {
+  return (
+    <h2
+      className={clsx(
+        `${className}`,
+        color == "dark" ? `text-custom-300` : `text-custom-50`,
+        "text-[34px] sm:text-[46px] lg:text-[55px] leading-none font-serif"
+      )}
+    >
+      {title}
+    </h2>
+  );
+};
+
+export const WideUpperCText = ({ title, className }: WideUpperCTextProps) => {
+  return (
+    <p
+      className={clsx(
+        `${className}`,
+        `text-sm uppercase font-normal tracking-widest`
+      )}
+    >
+      {title}
+    </p>
   );
 };
 
