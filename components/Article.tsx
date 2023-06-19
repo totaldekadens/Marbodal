@@ -1,4 +1,5 @@
 import Button from "./Button";
+import { H2 } from "./Fonts";
 import Container from "./Layout/Container";
 
 const Article = () => {
@@ -9,9 +10,10 @@ const Article = () => {
           <p className="text-sm uppercase font-normal tracking-widest">
             Hemma hos Svante Öqvist och Niklas Steeve
           </p>
-          <h2 className="text-[46px] leading-tight font-serif">
-            ”Vi ritade vårt drömkök med hjälp av Marbodal”
-          </h2>
+          <H2
+            color="dark"
+            title={`”Vi ritade vårt drömkök med hjälp av Marbodal”`}
+          />
           <p className="">
             De ville ha ett kök som passade in i det arkitektritade huset. Och
             när det existerande köket började ramla sönder var det dags. Svante

@@ -31,7 +31,7 @@ const Button = ({
   ...props
 }: ButtonProps & LinkProps) => {
   className = clsx(
-    "rounded-sm font-sans",
+    "rounded-sm font-sans text-center",
     variantStyle[variant],
     className,
     small ? "text-xs lg:text-base p-2.5" : "text-base px-5 py-3"

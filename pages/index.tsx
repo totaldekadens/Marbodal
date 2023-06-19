@@ -1,4 +1,5 @@
 import Article from "@/components/Article";
+import Chosen from "@/components/Chosen";
 import Hero from "@/components/Hero";
 import Usp from "@/components/Usp";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Usp />
       <Article />
+      <Chosen />
     </main>
   );
 }
