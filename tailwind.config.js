@@ -14,10 +14,14 @@ module.exports = {
       },
       colors: {
         custom: {
-          50: "#FBF9F6",
-          100: "#F2E9DB",
-          200: "#E4D4C4",
-          300: "#31261D",
+          50: withOpacity("--color-50"),
+          100: withOpacity("--color-100"),
+          200: withOpacity("--color-200"),
+          300: withOpacity("--color-300"),
+        },
+        decor: {
+          50: withOpacity("--color-decor1"),
+          100: withOpacity("--color-decor2"),
         },
       },
       fontFamily: {
@@ -28,3 +32,12 @@ module.exports = {
   },
   plugins: [require("@tailwindcss/forms")],
 };
+
+function withOpacity(variableName) {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(var(${variableName}), ${opacityValue})`;
+    }
+    return `rgb(var(${variableName}))`;
+  };
+}
