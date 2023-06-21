@@ -13,8 +13,8 @@ const colors = {
   shade1: "#F2E9DB",
   shade2: "#E4D4C4",
   shade3: "#31261D",
-  decor1: "##9CA9BD",
-  decor2: "##1E44CB",
+  decor1: "#9CA9BD",
+  decor2: "#1E44CB",
 };
 
 export default function Home() {

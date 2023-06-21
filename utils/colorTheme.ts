@@ -7,10 +7,11 @@ export const getRGBColor = (hex: string, type: string) => {
     console.error("Invalid hex code");
     return null;
   }
+
   // rgb values
   var r = parseInt(color.substring(0, 2), 16);
   var g = parseInt(color.substring(2, 4), 16);
-  var b = parseInt(color.substring(4, 2), 16);
+  var b = parseInt(color.substring(4, 6), 16);
 
   // Check if any of the RGBA values are NaN
   if (isNaN(r) || isNaN(g) || isNaN(b)) {
