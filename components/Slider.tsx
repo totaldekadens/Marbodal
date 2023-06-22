@@ -1,10 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Container from "../Layout/Container";
+import Container from "./Layout/Container";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import ButtonDirection from "../Buttons/ButtonDirection";
+import ButtonDirection from "./Buttons/ButtonDirection";
 import { list } from "@/utils/data";
-import { H3Small } from "../Fonts";
+import { H3Small } from "./Fonts";
 
 interface Object {
   title: string;

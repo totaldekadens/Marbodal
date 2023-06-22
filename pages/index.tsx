@@ -1,12 +1,13 @@
 import Article from "@/components/Article";
 import Article2 from "@/components/Article2";
 import Article3 from "@/components/Article3";
-import Slider from "@/components/Slider/Slider";
+import Slider from "@/components/Slider";
 import Chosen from "@/components/Chosen";
 import Hero from "@/components/Hero";
 import Usp from "@/components/Usp";
 import { getAccessibleColor, getRGBColor } from "@/utils/colorTheme";
 import Head from "next/head";
+import Newsletter from "@/components/Newsletter";
 
 // Could be an example from backend
 const colors = {
@@ -44,6 +45,7 @@ export default function Home() {
         <Article2 />
         <Article3 />
         <Slider />
+        <Newsletter />
       </main>
     </>
   );
