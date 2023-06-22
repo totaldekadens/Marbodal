@@ -5,7 +5,7 @@ import Slider from "@/components/Slider";
 import Chosen from "@/components/Chosen";
 import Hero from "@/components/Hero";
 import Usp from "@/components/Usp";
-import { getAccessibleColor, getRGBColor } from "@/utils/colorTheme";
+import { getAccessibleColor, getRGBColor } from "@/utils/colors";
 import Head from "next/head";
 import Newsletter from "@/components/Newsletter";
 import Article4 from "@/components/Article4";

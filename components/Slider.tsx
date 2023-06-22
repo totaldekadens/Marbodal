@@ -25,11 +25,13 @@ interface Props {
 const SliderCard = ({ object }: Props) => {
   return (
     <div className="flex flex-col w-11/12 sm:w-1/3 md:w-1/4 lg:w-[23%] flex-shrink-0 relative ">
-      <img
-        src={object.image.src}
-        alt={object.image.alt}
-        className="object-cover object-center w-full"
-      />
+      <div className="overflow-x-hidden overflow-y-hidden">
+        <img
+          src={object.image.src}
+          alt={object.image.alt}
+          className="object-cover object-center w-full  transition duration-700 ease-in-out hover:scale-105"
+        />
+      </div>
       <div
         style={{ backgroundColor: object.colorHex }}
         className="absolute w-8 h-8 z-50 overflow-visible rounded-full bottom-10 right-5"

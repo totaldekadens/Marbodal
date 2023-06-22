@@ -56,11 +56,11 @@ interface Props {
 
 const Card = ({ object }: Props) => {
   return (
-    <div className="flex flex-col relative ">
+    <div className="flex flex-col relative overflow-hidden ">
       <img
         src={object.image.src}
         alt={object.image.alt}
-        className="object-cover object-center w-full"
+        className="object-cover object-center w-full transition duration-700 ease-in-out hover:scale-105"
       />
 
       <div className="flex flex-col text-custom-300 mt-4 gap-2 pb-5">
