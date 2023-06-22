@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Cormorant, Inter } from "next/font/google";
 import Header from "@/components/Layout/Header";
+import Footer from "@/components/Layout/Footer";
 
 // Fonts
 const cormorant = Cormorant({
@@ -17,6 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
     >
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </div>
   );
 }
