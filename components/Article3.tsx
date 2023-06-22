@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "./Buttons/Button";
 import { H2, H2Small } from "./Fonts";
 
 // Todo: Check px
@@ -6,7 +6,7 @@ const Article3 = () => {
   return (
     <>
       {/* Desktop */}
-      <div className="hidden md:flex mt-44 bg-custom-200 relative w-full z-0  flex-col pr-4 sm:pl-4 sm:pt-4 sm-pb-4 md:pr-6 lg:px-14 xl:px-[96px] ">
+      <div className="hidden md:flex mt-44 bg-custom-200 relative w-full z-0  flex-col sm:pt-4 sm-pb-4 md:px-6 lg:px-14 xl:px-[96px] ">
         <div className="flex items-center justify-between xl:justify-center   md:gap-14 lg:pl-4 lg:gap-28  md:pr-14 xl:gap-32  lg:py-12 ">
           <div className=" sm:h-72 md:w-[600px] lg:w-auto lg:h-auto ">
             <img src="/kok5.png" className="w-full h-full object-cover" />
@@ -23,7 +23,7 @@ const Article3 = () => {
         </div>
       </div>
       {/* Tab and Mobile Device */}
-      <div className=" md:hidden mt-28 bg-custom-200 relative w-full z-0 flex flex-col pt-24 px-4 ">
+      <div className=" md:hidden mt-28 bg-custom-200 relative w-full z-0 flex flex-col pt-24 px-6 ">
         <div className="flex flex-col w-full items-center justify-between  ">
           <div className="w-full h-full ">
             <img src="/kok5.png" className="w-full h-full object-cover" />

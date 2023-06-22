@@ -7,7 +7,7 @@ const variantStyle = {
   modest: "text-custom-300 border border-custom-300 hover:bg-custom-300/10",
 };
 
-interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: "light" | "dark" | "modest";
   title: string;
   className?: string;
@@ -15,7 +15,7 @@ interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   small?: boolean;
 }
 
-interface LinkProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   variant: "light" | "dark" | "modest";
   title: string;
   className?: string;

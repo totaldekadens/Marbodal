@@ -60,6 +60,20 @@ export const H3 = ({ title, className, color }: H2Props) => {
   );
 };
 
+export const H3Small = ({ title, className, color }: H2Props) => {
+  return (
+    <h2
+      className={clsx(
+        `${className}`,
+        color == "dark" ? `text-custom-300` : `text-custom-50`,
+        "text-[34px] sm:text-[36px] lg:text-[46px] leading-[3.5rem] font-serif"
+      )}
+    >
+      {title}
+    </h2>
+  );
+};
+
 export const WideUpperCText = ({ title, className }: WideUpperCTextProps) => {
   return (
     <p

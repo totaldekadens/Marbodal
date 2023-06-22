@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "./Buttons/Button";
 import { H2, P, WideUpperCText } from "./Fonts";
 import Container from "./Layout/Container";
 

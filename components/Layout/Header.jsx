@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import MobileNavigation from "./MobileNavigation";
-import Button from "../Button";
+import Button from "../Buttons/Button";
 import {
   MapPinIcon,
   HeartIcon,

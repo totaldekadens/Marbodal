@@ -1,6 +1,7 @@
 import Article from "@/components/Article";
 import Article2 from "@/components/Article2";
 import Article3 from "@/components/Article3";
+import Slider from "@/components/Slider/Slider";
 import Chosen from "@/components/Chosen";
 import Hero from "@/components/Hero";
 import Usp from "@/components/Usp";
@@ -42,6 +43,7 @@ export default function Home() {
         <Chosen />
         <Article2 />
         <Article3 />
+        <Slider />
       </main>
     </>
   );

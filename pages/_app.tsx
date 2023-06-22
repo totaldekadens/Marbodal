@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { Cormorant, Inter } from "next/font/google";
 import Header from "@/components/Layout/Header";
 
+// Fonts
 const cormorant = Cormorant({
   subsets: ["latin"],
   variable: "--font-cormorant",
