@@ -8,6 +8,7 @@ import Usp from "@/components/Usp";
 import { getAccessibleColor, getRGBColor } from "@/utils/colorTheme";
 import Head from "next/head";
 import Newsletter from "@/components/Newsletter";
+import Article4 from "@/components/Article4";
 
 // Could be an example from backend
 const colors = {
@@ -46,6 +47,7 @@ export default function Home() {
         <Article3 />
         <Slider />
         <Newsletter />
+        <Article4 />
       </main>
     </>
   );
