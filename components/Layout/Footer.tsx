@@ -89,8 +89,8 @@ const Footer = () => {
                 </h3>
                 <Disclosure.Panel className="pt-6">
                   <div className="space-y-4">
-                    {section.links.map((link, optionIdx) => (
-                      <div key={optionIdx} className="flex items-center">
+                    {section.links.map((link, i) => (
+                      <div key={i} className="flex items-center">
                         <Link
                           className="text-sm text-custom-300 mt-2"
                           key={i}
