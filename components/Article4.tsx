@@ -61,7 +61,7 @@ const Card = ({ object }: Props) => {
       />
 
       <div className="flex flex-col text-custom-300 mt-4 gap-2 pb-5">
-        <h3 className="lg:text-xl font-semibold leading-4 text-base lg:leading-5 ">
+        <h3 className="lg:text-xl text-custom-300 font-semibold leading-4 text-base lg:leading-5 ">
           {object.title}
         </h3>
         <P text={object.description} color="dark" />
