@@ -1,9 +1,6 @@
-import React, { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 import Container from "./Layout/Container";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import ButtonDirection from "./Buttons/ButtonDirection";
-import { H2, H3Small, P } from "./Fonts";
+import { H2, P } from "./Fonts";
 import Link from "next/link";
 
 const list = [
