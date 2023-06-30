@@ -11,8 +11,11 @@ const Footer = () => {
     <Container className="py-14 bg-custom-200">
       {/* upper */}
       <div className="flex w-full flex-col gap-8 sm:gap-0 sm:flex-row justify-around pb-12 sm:border sm:border-t-0 sm:border-l-0 sm:border-r-0 sm:border-b-decor-50/40">
-        {upper.map((object) => (
-          <div className="flex gap-3 justify-center items-center flex-col w-">
+        {upper.map((object, i) => (
+          <div
+            key={i}
+            className="flex gap-3 justify-center items-center flex-col w-"
+          >
             <img src={object.icon} />
             <h3 className="lg:text-xl text-custom-300 font-semibold leading-4 text-base lg:leading-5 ">
               {object.title}
@@ -44,8 +47,8 @@ const Footer = () => {
           </div>
         </div>
         <div style={{ columns: "150px 5", columnGap: "40px", width: "100%" }}>
-          {navlinks.map((category) => (
-            <div style={{ pageBreakInside: "avoid" }} className="mb-14">
+          {navlinks.map((category, i) => (
+            <div key={i} style={{ pageBreakInside: "avoid" }} className="mb-14">
               {/* The children will not split up between different columns with "pageBreakInside: "avoid" "*/}
               <h3 className="lg:text-sm text-custom-300 font-semibold leading-4 text-base lg:leading-5 ">
                 {category.header}
@@ -58,6 +61,7 @@ const Footer = () => {
                     </li>
                   </Link>
                 ))}
+                s
               </ul>
             </div>
           ))}

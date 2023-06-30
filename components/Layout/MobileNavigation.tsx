@@ -3,16 +3,22 @@ import { Popover, Transition } from "@headlessui/react";
 import Link from "next/link";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
+import { MobileNavList } from "@/utils/data";
 
 interface NavItemProps {
   href: string;
   children: React.ReactNode;
+  serif?: boolean;
 }
 
-function MobileNavItem({ href, children }: NavItemProps) {
+function MobileNavItem({ href, children, serif }: NavItemProps) {
   return (
     <li>
-      <Popover.Button as={Link} href={href} className="block w-full py-5">
+      <Popover.Button
+        as={Link}
+        href={href}
+        className={clsx(serif ? `font-serif` : ``, `block w-full  py-2`)}
+      >
         {children}
       </Popover.Button>
     </li>
@@ -37,17 +43,7 @@ function MobileNavigation({ className }: Props) {
         </div>
       </Popover.Button>
       <Transition.Root>
-        <Transition.Child
-          as={Fragment}
-          enter="transition ease-in-out duration-300 transform"
-          enterFrom="-translate-x-full"
-          enterTo="translate-x-0"
-          leave="transition ease-in-out duration-300 transform"
-          leaveFrom="translate-x-0"
-          leaveTo="-translate-x-full"
-        >
-          <Popover.Overlay className="fixed inset-0 z-50   " />
-        </Transition.Child>
+        <Popover.Overlay className="fixed inset-0 z-50 bg-black/20 transition ease-in transform" />
         <Transition.Child
           as={Fragment}
           enter="ease-in-out duration-300"
@@ -59,22 +55,37 @@ function MobileNavigation({ className }: Props) {
         >
           <Popover.Panel
             focus
-            className="bg-white dark:bg-dark-300 fixed bottom-0 left-0 top-0 w-[400px]  z-50 origin-top px-8 py-5 "
+            className="bg-custom-100 dark:bg-dark-300 fixed bottom-0 left-0 top-0 w-[500px]  z-50 origin-top px-8 py-5 "
           >
             <div className="flex flex-row-reverse items-center justify-between">
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
-                <XMarkIcon className="text-light-300 dark:text-light-100 h-10 w-10" />
+                <XMarkIcon className="text-custom-300 h-10 w-10" />
               </Popover.Button>
+              <div className="flex w-48">
+                <img src="/marbodal_dark.webp" />
+              </div>
             </div>
 
-            <nav className="mt-10 flex h-full w-full  ">
-              <ul className="divide-dark-300/5 text-light-300 dark:text-light-200 -my-2  flex w-full flex-col divide-y text-3xl dark:divide-zinc-100/5">
-                <MobileNavItem href="/about">About</MobileNavItem>
-                <MobileNavItem href="/projects">Projects</MobileNavItem>
-                <MobileNavItem href="/tech">Tech</MobileNavItem>
-                <MobileNavItem href="/merits">Merits</MobileNavItem>
+            <nav className="mt-10 flex flex-col h-full w-full  ">
+              <ul className="text-custom-300 -my-2  flex w-full flex-col divide-y text-3xl ">
+                {MobileNavList.primary.map((link) => (
+                  <MobileNavItem serif href={link.href}>
+                    {link.title}
+                  </MobileNavItem>
+                ))}
+              </ul>
+              <ul className="text-custom-300 mt-10  flex w-full flex-col divide-y font-normal text-xl ">
+                {MobileNavList.secondary.map((link) => (
+                  <MobileNavItem href={link.href}>{link.title}</MobileNavItem>
+                ))}
               </ul>
             </nav>
+            <div className="absolute bottom-0 right-0 left-0 h-36 bg-custom-200 flex flex-col justify-evenly pl-6">
+              <ul className="text-custom-300  flex w-full flex-col font-normal text-xl ">
+                <MobileNavItem href="#">Hitta butik</MobileNavItem>
+                <MobileNavItem href="#">Mina favoriter</MobileNavItem>
+              </ul>
+            </div>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>

@@ -89,6 +89,24 @@ export const list = [
   },
 ];
 
+/* Header */
+
+export const MobileNavList = {
+  primary: [
+    { title: "Våra kök", href: "#" },
+    { title: "Inspiration", href: "#" },
+    { title: "Hållbarhet", href: "#" },
+    { title: "Projekt & arkitekt", href: "#" },
+  ],
+  secondary: [
+    { title: "Aktuell kampanj", href: "#" },
+    { title: "Badrum & förvaring", href: "#" },
+    { title: "Kontakta oss", href: "#" },
+    { title: "Boka möte med en designer", href: "#" },
+    { title: "Designa ditt kök", href: "#" },
+  ],
+};
+
 /* Footer */
 
 export const upper = [
