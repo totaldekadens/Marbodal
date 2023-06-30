@@ -53,7 +53,7 @@ interface Props {
 
 const Card = ({ object }: Props) => {
   return (
-    <div className="flex flex-col relative overflow-hidden ">
+    <div className="flex flex-col relative overflow-hidden cursor-pointer ">
       <img
         src={object.image.src}
         alt={object.image.alt}

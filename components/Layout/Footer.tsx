@@ -43,7 +43,7 @@ const Footer = () => {
             <Button title="Boka möte" variant="dark" />
           </div>
         </div>
-        <div style={{ columns: "150px 5", columnGap: "40px" }}>
+        <div style={{ columns: "150px 5", columnGap: "40px", width: "100%" }}>
           {navlinks.map((category) => (
             <div style={{ pageBreakInside: "avoid" }} className="mb-14">
               {/* The children will not split up between different columns with "pageBreakInside: "avoid" "*/}

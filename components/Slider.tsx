@@ -29,7 +29,7 @@ const SliderCard = ({ object }: Props) => {
         <img
           src={object.image.src}
           alt={object.image.alt}
-          className="object-cover object-center w-full  transition duration-700 ease-in-out hover:scale-105"
+          className="object-cover object-center w-full cursor-pointer transition duration-700 ease-in-out hover:scale-105"
         />
       </div>
       <div
