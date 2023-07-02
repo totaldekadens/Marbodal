@@ -1,6 +1,6 @@
-# Marbodal Landing page - Ongoing
+# Marbodal Landing page
 
-My goal is to visually come as close as possible to Marbodals website using Next.js and Tailwind.
+My goal was to visually come as close as possible to Marbodals website using Next.js and Tailwind.
 
 ## Getting Started
 
@@ -12,4 +12,12 @@ npm run dev
 
 ## Sneak peak
 
-![Skärmavbild 2023-06-18 kl  18 17 03](https://github.com/totaldekadens/Marbodal/assets/90898648/8fee0ffd-1d25-40da-8a8c-eba705096c1d)
+Had to reduce the quality on the video below. Please check out this link for better quality: https://www.mobergskoglund.se/projects/marbodal
+
+
+https://github.com/totaldekadens/Marbodal/assets/90898648/a31a264e-f8c9-4354-a625-ddd255cf75c5
+
+
+
+https://github.com/totaldekadens/Marbodal/assets/90898648/cab995d4-c374-498a-ad01-0dd8b029e6c9
+
