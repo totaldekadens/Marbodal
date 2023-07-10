@@ -1,6 +1,6 @@
 # Marbodal Landing page
 
-My goal was to visually come as close as possible (almost, I did som tweaks) to Marbodals website using Next.js and Tailwind.
+My goal was to visually come as close as possible (almost, I did some tweaks) to Marbodals website using Next.js and Tailwind.
 
 ## Getting Started
 
